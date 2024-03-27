@@ -64,17 +64,103 @@ html, body{
     margin: 5px;
 }
 
+.three{
+    background-image: url(photo-1549590143-d5855148a9d5.avif);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+.contents{
 
-@media (max-width: 1200px) {
-    .images img {
-        flex-basis:calc(33% - 10px); /* 3 images per row */
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8vw;
+}
+.card1{
+    background-color: #424242;
+    padding: 2vw 4vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8vw;
+}
+.card1 .line{
+    height: 1.2px;
+    width: 90%;
+    background-color: goldenrod;
+}
+.card1 button{
+    padding: 0.7vw 2.1vw;
+    margin-top: 1vw;
+    color: white;
+    background-color: goldenrod;
+    border: none;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.card1 h3{
+    font-size: 1.5vw;
+}
+.card1 h4{
+    font-size: 1.1vw;
+}
+.card1 p{
+    font-size: 0.9vw;
 }
 
-@media (max-width: 800px) {
-    .images img {
-        flex-basis:calc(50% - 10px); /* 2 images per row */
-    }
+
+.card2{
+    background-color: rgb(66, 66, 66);
+    padding: 2vw 4vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8vw;
+}
+.f1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+}
+.f2, form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3vw;
+}
+
+.card2 button{
+    padding: 0.7vw 2.1vw;
+    margin-top: 1vw;
+    color: white;
+    background-color: goldenrod;
+    border: none;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.card2 h3, form h3{
+    font-size: 1.5vw;
+}
+.card2 p{
+    font-size: 0.9vw;
+}
+form input{
+    width: 12vw;
+}
+form input::placeholder{
+    font-size: 1vw;
 }
 
 @media (max-width: 600px) {
@@ -86,5 +172,19 @@ html, body{
     }
     .cont p{
         font-size: 2.1vw;
+    }
+    .card1, .card2{
+        width: 49%;
+    }
+}
+@media (max-width: 1200px) {
+    .images img {
+        flex-basis:calc(33% - 10px); /* 3 images per row */
+    }
+}
+
+@media (max-width: 800px) {
+    .images img {
+        flex-basis:calc(50% - 10px); /* 2 images per row */
     }
 }
