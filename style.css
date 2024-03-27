@@ -63,7 +63,33 @@ html, body{
     object-fit: cover;
     margin: 5px;
 }
+@media (max-width: 600px) {
+    .images img {
+        flex: 0 0 calc(100% - 10px); /* 1 image per row */
+    }
+    /* .cont h2{
+        font-size: 7vw;
+    }
+    .cont p{
+        font-size: 2.1vw;
+    }
+    .card1, .card2{
+        width: 49%;
+    } */
+}
+@media (max-width: 1200px) {
+    .images img {
+        flex: 0 0 calc(33.33% - 10px); /* 3 images per row */
+    }
+}
 
+@media (max-width: 800px) {
+    .images img {
+        flex: 0 0 calc(50% - 10px); /* 2 images per row */
+    }
+}
+
+/* 
 .three{
     background-image: url(photo-1549590143-d5855148a9d5.avif);
     background-position: bottom;
@@ -161,30 +187,4 @@ form input{
 }
 form input::placeholder{
     font-size: 1vw;
-}
-
-@media (max-width: 600px) {
-    .images img {
-        flex-basis:calc(100% - 10px); /* 1 image per row */
-    }
-    .cont h2{
-        font-size: 7vw;
-    }
-    .cont p{
-        font-size: 2.1vw;
-    }
-    .card1, .card2{
-        width: 49%;
-    }
-}
-@media (max-width: 1200px) {
-    .images img {
-        flex-basis:calc(33% - 10px); /* 3 images per row */
-    }
-}
-
-@media (max-width: 800px) {
-    .images img {
-        flex-basis:calc(50% - 10px); /* 2 images per row */
-    }
-}
+} */
