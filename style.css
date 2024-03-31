@@ -57,14 +57,30 @@ html, body{
     flex-wrap: wrap;
     justify-content: center;
 }
-.images img{
-    height: 230px;;
+.images .card{
+    height: 230px;
     width: 280px;
-    object-fit: cover;
-    margin: 5px;
+    margin: 15px 5px;
 }
+.images img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+@media (max-width: 1200px) {
+    .images .card {
+        flex: 0 0 calc(33.33% - 10px); /* 3 images per row */
+    }
+}
+
+@media (max-width: 800px) {
+    .images .card {
+        flex: 0 0 calc(50% - 10px); /* 2 images per row */
+    }
+}
+
 @media (max-width: 600px) {
-    .images img {
+    .images .card {
         flex: 0 0 calc(100% - 10px); /* 1 image per row */
     }
     /* .cont h2{
@@ -77,19 +93,6 @@ html, body{
         width: 49%;
     } */
 }
-@media (max-width: 1200px) {
-    .images img {
-        flex: 0 0 calc(33.33% - 10px); /* 3 images per row */
-    }
-}
-
-@media (max-width: 800px) {
-    .images img {
-        flex: 0 0 calc(50% - 10px); /* 2 images per row */
-    }
-}
-
-/* 
 .three{
     background-image: url(photo-1549590143-d5855148a9d5.avif);
     background-position: bottom;
@@ -106,7 +109,7 @@ html, body{
     align-items: center;
     flex-wrap: wrap;
     gap: 8vw;
-}
+} 
 .card1{
     background-color: #424242;
     padding: 2vw 4vw;
@@ -114,7 +117,7 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     gap: 0.8vw;
 }
 .card1 .line{
@@ -141,8 +144,7 @@ html, body{
     font-size: 0.9vw;
 }
 
-
-.card2{
+.card2 {
     background-color: rgb(66, 66, 66);
     padding: 2vw 4vw;
     color: white;
@@ -152,14 +154,16 @@ html, body{
     justify-content: flex-start;
     gap: 0.8vw;
 }
-.f1{
+
+.f1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.5vw;
 }
-.f2, form{
+
+.f2, form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -167,7 +171,7 @@ html, body{
     gap: 0.3vw;
 }
 
-.card2 button{
+.card2 button {
     padding: 0.7vw 2.1vw;
     margin-top: 1vw;
     color: white;
@@ -176,15 +180,47 @@ html, body{
     font-size: 1vw;
     cursor: pointer;
 }
-.card2 h3, form h3{
+
+.card2 h3, form h3 {
     font-size: 1.5vw;
 }
-.card2 p{
+
+.card2 p {
     font-size: 0.9vw;
 }
-form input{
-    width: 12vw;
+
+form input {
+    width: 10vw;
+    height: 2vw;
 }
-form input::placeholder{
+input[type="text"]
+{
+    font-size:1vw;
+}
+form input::placeholder {
     font-size: 1vw;
-} */
+}
+
+@media (min-width: 800px) {
+    .card2 {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .f1, .f2, form {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .card2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .f1, .f2, form {
+        margin-bottom: 20px;
+    }
+}
